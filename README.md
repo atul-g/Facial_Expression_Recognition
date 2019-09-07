@@ -3,9 +3,9 @@ A personal project on Facial Expression Recognition where I created a Flask back
 
 #### Preview
 
-<img src="https://raw.githubusercontent.com/et-tu-atulu/Facial_Expression_Recognition/master/Screenshot%20from%202019-09-07%2017-40-29.png" height="400" width="700">
-<img src="https://raw.githubusercontent.com/et-tu-atulu/Facial_Expression_Recognition/master/Screenshot%20from%202019-09-07%2017-40-58.png" height="400" width="700">
-<img src="https://raw.githubusercontent.com/et-tu-atulu/Facial_Expression_Recognition/master/Screenshot%20from%202019-09-07%2017-41-53.png" height="400" width="700">
+<img src="https://raw.githubusercontent.com/et-tu-atulu/Facial_Expression_Recognition/master/Screenshot%20from%202019-09-07%2017-40-29.png" height="400" width="750">
+<img src="https://raw.githubusercontent.com/et-tu-atulu/Facial_Expression_Recognition/master/Screenshot%20from%202019-09-07%2017-40-58.png" height="400" width="750">
+<img src="https://raw.githubusercontent.com/et-tu-atulu/Facial_Expression_Recognition/master/Screenshot%20from%202019-09-07%2017-41-53.png" height="400" width="750">
 
 
 As you can see, the project consists of a flask web app where user can start a live stream from the (server) webcam. This was made possible through OpenCV. OpenCV captures video which is basically a series of frames. These frames are passed to a neural network which was trained on the FER2013 dataset. Using OpenCV and the Haar-Cascade files we can detect the faces too.
@@ -16,7 +16,7 @@ Human expressions can be classified into 7 categories: Angry, Happy, Disgust, Fe
 
 I have added a python script to read the csv file and to create the images in separate expression directories. You can find the link [here](https://github.com/et-tu-atulu/Facial_Expression_Recognition/blob/master/creating_img_from_csv.py).
 We use a tensorflow.keras model to train on the dataset. Although this dataset contains a large number of images, the quality of the images makes it really hard to achieve any good validation/training accuracy.
-Credits to Furkan Kinli for this article and we use the specified architecture for our neural network as given in the [article](https://medium.com/@birdortyedi_23820/deep-learning-lab-episode-3-fer2013-c38f2e052280).
+Credits to Furkan Kinli for his article in Medium and we use the specified architecture for our neural network as given in the said [article](https://medium.com/@birdortyedi_23820/deep-learning-lab-episode-3-fer2013-c38f2e052280).
 
 Model architecture:
 
@@ -38,7 +38,7 @@ This model does relatively well. I got a 65% accuracy on my training and validat
 
 Model accuracy graph:
 
-<img src="https://raw.githubusercontent.com/et-tu-atulu/Facial_Expression_Recognition/master/Screenshot%20from%202019-09-07%2019-01-50.png" height="600" width="350">
+<img src="https://raw.githubusercontent.com/et-tu-atulu/Facial_Expression_Recognition/master/Screenshot%20from%202019-09-07%2019-01-50.png" height="600" width="400">
 
 ### Face Detection and Expression:
 Face detection was done with the help of Haar Cascade files (I have uploaded them in the repository) and OpenCV. After starting the video capture using OpenCV which automatically starts after user clicks on "Start Video Streaming" link, the frames are passed to detect any faces and if any, it draws a rectangle over the face. The region of interest, that is, the face alone is then cropped out and reshaped into 48x48 to pass it to our trained model which predicts the expression.
