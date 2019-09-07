@@ -1,0 +1,88 @@
+body{
+    background:#000000;
+}
+
+.navbar{
+    position:fixed;
+    width:100%
+}
+
+.jumbotron{
+    padding-top:7rem;
+    margin-bottom:0px;
+    background-color:#A9A9A9;
+    color:#FFFFFF;
+}
+
+
+h5{
+    align-content: center;
+    color: white;
+    text-align: left;
+    padding-top: 2rem;
+    font-family: 'Manjari', sans-serif;
+}
+
+
+.btn{
+    color: #FFFFFF;
+    margin-top: 2rem;
+    margin-bottom:2rem;
+}
+
+.overlay{
+
+    background-image: url("/static/s001-01_img.bmp"), url("/static/s009-03_img.bmp"), url('/static/s037-00_img.bmp'), url('/static/s013-01_img.bmp'), url('/static/s015-05_img.bmp'), url('/static/s026-09_img.bmp');
+
+
+/**
+    background-image:url("/static/gray1.jpg"), url("/static/gray2.jpg"), url("/static/gray6.jpg"), url("/static/gray3.jpg"), url("/static/gray4.jpg"), url("/static/gray5.jpg");
+**/
+    /**background-position-x: left, right;**/
+    background-position: right top, left top, left, right, right bottom, left bottom;
+    width:100%;
+    height:1440px;
+    background-repeat: no-repeat;
+}
+#cont_text{
+    
+    background: rgba(0, 0, 0, 0.6);
+    color:#FFFFFF;
+    height:100%;
+
+}
+
+#network{
+    text-align:center;
+}
+
+.page-footer{
+    background-color:#A9A9A9;
+}
+
+ 
+/** This is for the video_stream.html file elements **/
+h1{
+    font-family: 'Manjari', sans-serif;
+}
+#vid_stream{
+    color:white;
+    text-align:center;
+    padding:3rem;
+    
+}
+#vid_header{
+    padding-top:2rem;
+}
+
+#video-screen{
+    border: #A9A9A9 solid;
+    padding;5rem;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Welcome :)</h1>
+        <p class="lead">This is a self project on Facial Expression Recognition</p>
+      </div>
+    </div>
+
+
+<div class='bgblack'>
+
+    <div class='overlay' id="bgim">
+    <!--
+        <img src="https://images.unsplash.com/photo-1535701121392-da2f8ef792f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" style="width:50%;">
+        <img src="https://images.unsplash.com/photo-1512485694743-9c9538b4e6e0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" style="width:50%; height:100%">
+
+    -->
+
+        <div class="container" id='cont_text'>
+            <h5>Click below to start capturing video from the webcam and to check out the Facial Expression Recognizer</h5>
+            <button type="button" class="btn btn-outline-light">
+                <a href="{{ url_for('vid_stream') }}">Start Video Streaming</a>
+            </button>
+                <br>
+                <br>
+                <p>This project comprises of a webpage developed using Flask backend combined with OpenCV to read in video stream through the webcam and passing the series of frames to a Keras neural network to detect the face in the image/video and to predict the expression shown by the face.
+                </p>
+                <p>The neural network was trained on the FER2013 dataset which comprises of 35,884 images of the following categories of human facial expression:</p>
+                <br>
+                <ul>
+                    <li>Anger</li>
+                    <li>Disgust</li>
+                    <li>Happy</li>
+                    <li>Surprised</li>
+                    <li>Neutral</li>
+                    <li>Sad</li>
+                    <li>Fear</li>
+                </ul>
+                <br>
+
+                <p>I then used the Haar Cascades (frontal face) xml file to detect the face in a given frame. The co-ordinates of the detected face was then used to crop out the face alone from the frame and then passed into the trained neural network to detect the expression displayed in the image.
+                </p>
+                <p>The neural network used had the following the architecture:</p>
+                <br>
+                <br>
+                <ul id="network">
+                    <li>[2 x CONV (3x3)] — MAXP (2x2) — DROPOUT (0.5)</li>
+                    <li>[2 x CONV (3x3)] — MAXP (2x2) — DROPOUT (0.5)</li>
+                    <li>[2 x CONV (3x3)] — MAXP (2x2) — DROPOUT (0.5)</li>
+                    <li>[2 x CONV (3x3)] — MAXP (2x2) — DROPOUT (0.5)</li>
+                    <li>Dense (512) — DROPOUT (0.4)</li>
+                    <li>Dense (256) — DROPOUT (0.4)</li>
+                    <li>Dense (128) — DROPOUT (0.4)</li>
+                </ul>
+                <br>
+                <br>
+                <p>The architecture was inspired from an article in medium. The link to the article is <a href="https://medium.com/@birdortyedi_23820/deep-learning-lab-episode-3-fer2013-c38f2e052280">here</a>.</p>
+                <p>Thanks to this architecture we were able to receive a 65% accuracy on both validation and training dataset. The model was built using tensorflow's keras API (tensorflow.keras) and trained for 100 epochs (with a possible Early Stopping in case there was no improvement in the model's validation loss while training).</p>
+                <p>The dataset which was used to train the model can be found <a href="https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data">here</a>.</p>
+
+
+                <br>
+                <br>
+
+                    
+            
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+</body>
+</html>
+

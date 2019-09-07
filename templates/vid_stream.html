@@ -1,0 +1,18 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<br>
+<div class='container' id="vid_stream">
+    <h1 id='vid_header'>Now Capturing Video Through Webcam</h1>
+    <br>
+    <p>Look at the webcam of your laptop and face it in a frontal manner. Don't cover your face using your hand as it will have difficulty detecting your face then. Although OpenCV can detect the face even in a dark lit room, it is better to be in a well lit room to get a beter prediction result of the expressions. (The neural network needs to be able to detect the face-features which are necessary to understand various expressions).
+    </p>
+
+    <br>
+
+    <img id="video-screen" src="{{ url_for('vid_str') }}" border="solid">
+    <br>
+</div>
+{% endblock %}
