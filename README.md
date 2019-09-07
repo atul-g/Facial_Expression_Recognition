@@ -1,7 +1,7 @@
 # Facial Expression Recognition on FER2013 dataset
 A personal project on Facial Expression Recognition where I created a Flask backend website which uses OpenCV to capture video through (server) webcam, detects the face in the frames and classifies the frame to the expression displayed.
 
-###### Preview
+#### Preview
 
 <img src="https://raw.githubusercontent.com/et-tu-atulu/Facial_Expression_Recognition/master/Screenshot%20from%202019-09-07%2017-40-29.png" height="400" width="700">
 <img src="https://raw.githubusercontent.com/et-tu-atulu/Facial_Expression_Recognition/master/Screenshot%20from%202019-09-07%2017-40-58.png" height="400" width="700">
@@ -20,24 +20,34 @@ Credits to Furkan Kinli for this article and we use the specified architecture f
 
 Model architecture:
 
--[2 x CONV (3x3)] — MAXP (2x2) — DROPOUT (0.5)
--[2 x CONV (3x3)] — MAXP (2x2) — DROPOUT (0.5)
--[2 x CONV (3x3)] — MAXP (2x2) — DROPOUT (0.5)
--[2 x CONV (3x3)] — MAXP (2x2) — DROPOUT (0.5)
--Dense (512) — DROPOUT (0.5)
--Dense (256) — DROPOUT (0.5)
--Dense (128) — DROPOUT (0.5)
+- [2 x CONV (3x3)] — MAXP (2x2) — DROPOUT (0.5)
+
+- [2 x CONV (3x3)] — MAXP (2x2) — DROPOUT (0.5)
+
+- [2 x CONV (3x3)] — MAXP (2x2) — DROPOUT (0.5)
+
+- [2 x CONV (3x3)] — MAXP (2x2) — DROPOUT (0.5)
+
+- Dense (512) — DROPOUT (0.5)
+
+- Dense (256) — DROPOUT (0.5)
+
+- Dense (128) — DROPOUT (0.5)
 
 This model does relatively well. I got a 65% accuracy on my training and validation dataset after training it for 100 epochs. After training the model was saved.
 
-model accuracy graph:
+Model accuracy graph:
 
 <img src="https://raw.githubusercontent.com/et-tu-atulu/Facial_Expression_Recognition/master/Screenshot%20from%202019-09-07%2019-01-50.png" height="600" width="350">
 
 ### Face Detection and Expression:
 Face detection was done with the help of Haar Cascade files (I have uploaded them in the repository) and OpenCV. After starting the video capture using OpenCV which automatically starts after user clicks on "Start Video Streaming" link, the frames are passed to detect any faces and if any, it draws a rectangle over the face. The region of interest, that is, the face alone is then cropped out and reshaped into 48x48 to pass it to our trained model which predicts the expression.
 
+### Devoloping site pages:
+Basic HTML and CSS coding was done to create the webpages. Multiple background images were used to make the background. The HTML and the CSS files for the site can be found in the templates and static directory. The MainApp.py is the server script.
 
+
+#### Thank You :)
 
 
 
