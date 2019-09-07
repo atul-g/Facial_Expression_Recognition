@@ -1,3 +1,11 @@
+
+"""
+This code is simply to create jpeg images from the pixel values in each row from the FER2013 dataset and storing
+them in appropriate class folders making it easier for us to train the model later on.
+"""
+
+
+
 import pandas as pd
 import numpy as np
 import cv2
