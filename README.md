@@ -44,8 +44,12 @@ Model accuracy graph:
 Face detection was done with the help of Haar Cascade files (I have uploaded them in the repository) and OpenCV. After starting the video capture using OpenCV which automatically starts after user clicks on "Start Video Streaming" link, the frames are passed to detect any faces and if any, it draws a rectangle over the face. The region of interest, that is, the face alone is then cropped out and reshaped into 48x48 to pass it to our trained model which predicts the expression.
 
 ### Devoloping site pages:
-Basic HTML and CSS coding was done to create the webpages. Multiple background images were used to make the background. The HTML and the CSS files for the site can be found in the templates and static directory. The MainApp.py is the server script.
+Basic HTML and CSS coding was done to create the webpages. Multiple background images were used to make the background. The HTML and the CSS files for the site can be found in the templates and static directory. The MainApp.py is the server script. The background images in the Home Page were used from this [dataset](http://app.visgraf.impa.br/database/faces).
 
+### Resources:
+[Building Webcamera recorder using Flask and OpenCV](https://www.codepool.biz/web-camera-recorder-oepncv-flask.html)
+
+[Neural Net for FER2013](https://medium.com/@birdortyedi_23820/deep-learning-lab-episode-3-fer2013-c38f2e052280)
 
 #### Thank You :)
 
