@@ -11,7 +11,7 @@ A personal project on Facial Expression Recognition where I created a Flask back
 As you can see, the project consists of a flask web app where user can start a live stream from the (server) webcam. This was made possible through OpenCV. OpenCV captures video which is basically a series of frames. These frames are passed to a neural network which was trained on the FER2013 dataset. Using OpenCV and the Haar-Cascade files we can detect the faces too.
 
 ### Training the Neural Network:
-We use the FER2013 dataset which can be found in this [link](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data) to train the model.
+I used the FER2013 dataset which can be found in this [link](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data) to train the model.
 Human expressions can be classified into 7 categories: Angry, Happy, Disgust, Fear, Neutral, Sad, Surprised. The dataset comprises of a CSV file which contains all the pixel values of the images in rows and a value which represents the expression diplayed in the corresponding image. The images are all 48x48 large and are grayscale.
 
 I have added a python script to read the csv file and to create the images in separate expression directories. You can find the link [here](https://github.com/et-tu-atulu/Facial_Expression_Recognition/blob/master/creating_img_from_csv.py).
